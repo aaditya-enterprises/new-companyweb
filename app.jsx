@@ -6,7 +6,7 @@ import {
   Shield, Clock, FileText, Zap, Heart, CheckSquare
 } from 'lucide-react';
 
-/* --- THEME & ASSETS --- */
+/* --- THEME & ASSETS--- */
 const THEME = {
   colors: {
     gold: '#C49A59',
@@ -879,5 +879,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;

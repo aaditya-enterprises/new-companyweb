@@ -302,7 +302,7 @@ const Hero = ({ onCtaClick }) => (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button onClick={onCtaClick} variant="primary">Plan Your Event</Button>
-        <Button onClick={() => onCtaClick('portfolio')} variant="outline">View Portfolio</Button>
+        <Button onClick={() => onCtaClick('portfolio')} variant="primary">View Portfolio</Button>
       </div>
     </div>
   </header>
@@ -879,5 +879,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;

@@ -196,7 +196,6 @@ const Navbar = ({ activePage, setActivePage }) => {
   const navLinks = [
     { name: 'Home', id: 'home' },
     { name: 'Services', id: 'services' },
-    { name: 'About', id: 'about' },
     { name: 'Portfolio', id: 'portfolio' },
     { name: 'Contact', id: 'contact' },
   ];
@@ -700,7 +699,7 @@ const Footer = ({ setActivePage }) => (
         <div>
           <h4 className="font-serif text-lg mb-6">Quick Links</h4>
           <ul className="space-y-3 text-sm text-gray-400">
-            {['Home', 'About Us', 'Services', 'Portfolio', 'Contact'].map(link => (
+            {['Home', 'Services', 'Portfolio', 'Contact'].map(link => (
               <li key={link}>
                 <button onClick={() => setActivePage(link.toLowerCase().split(' ')[0])} className="hover:text-white transition-colors">
                   {link}
@@ -883,5 +882,6 @@ const App = () => {
 };
 
 export default App;
+
 
 

@@ -137,7 +137,7 @@ const PORTFOLIO_ITEMS = [
     id: 1,
     title: "Niti Ayog Event",
     category: "Conference",
-    image: "../public/surajkund.png", 
+    image: "surajkund.png", 
     stats: { guests: "350+", location: "Vardaan Jimkana, Surajkund"},
     summary: "A 3-day global technology summit featuring 50+ speakers and immersive expo halls."
   },
@@ -145,7 +145,7 @@ const PORTFOLIO_ITEMS = [
     id: 2,
     title: "ITDC Event",
     category: "Conference",
-    image: "https://images.unsplash.com/photo-1519671482538-581aca198e32?q=80&w=1000&auto=format&fit=crop",
+    image: "vigyanbhavan.jpeg",
     stats: { guests: "900+", location: "Vigyan Bhavan, Delhi"},
     summary: "An elegant black-tie awards evening for the banking sector's top achievers."
   },
@@ -153,12 +153,17 @@ const PORTFOLIO_ITEMS = [
     id: 3,
     title: "ICMR Event",
     category: "Conference",
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1000&auto=format&fit=crop",
+    image: "bharatmandapam.png",
     stats: { guests: "3000+", location: "Bharat Mandapam, Delhi"},
     summary: "High-energy reveal of the new EV line with projection mapping and live demos."
   }
 ];
 
+const TEAM = [
+  { name: "Aarav Sharma", role: "Founder & CEO", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" },
+  { name: "Priya Mehta", role: "Head of Operations", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
+  { name: "David Chen", role: "Creative Director", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" },
+];
 
 /* --- COMPONENTS --- */
 
@@ -513,14 +518,7 @@ const PortfolioSection = () => {
                   and a design language that reflected the client's premium standing in the market. 
                   Our team handled everything from venue procurement to the final closing speech.
                 </p>
-                <div className="grid grid-cols-3 gap-4 border-t pt-6">
-                   {/* Placeholder for Gallery Images */}
-                   {[1,2,3].map(i => (
-                     <div key={i} className="bg-gray-200 h-24 rounded flex items-center justify-center text-gray-400 text-xs">
-                       Gallery {i}
-                     </div>
-                   ))}
-                </div>
+                {/* Gallery Removed as requested */}
               </div>
               <div className="bg-gray-50 p-6 rounded-lg h-fit">
                 <h3 className="font-serif text-lg mb-4">Key Stats</h3>
@@ -739,11 +737,10 @@ const Footer = ({ setActivePage }) => (
         <div>
           <h4 className="font-serif text-lg mb-6">Visit Us</h4>
           <address className="text-sm text-gray-400 not-italic leading-relaxed">
-            Building no. 112,<br/>
-            Kishangarh Near Fortis Hospital,<br/>
-            Vasant Kunj, Delhi, India 110070<br/><br/>
+            123 Business Bay, Tower A,<br/>
+            Financial District,<br/>
+            Mumbai, India 400051<br/><br/>
             <span className="text-white">+91 9873457729</span>
-            <span className="text-white">+91 9718474071</span>
           </address>
         </div>
       </div>

@@ -159,12 +159,6 @@ const PORTFOLIO_ITEMS = [
   }
 ];
 
-const TEAM = [
-  { name: "Aarav Sharma", role: "Founder & CEO", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" },
-  { name: "Priya Mehta", role: "Head of Operations", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
-  { name: "David Chen", role: "Creative Director", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" },
-];
-
 /* --- COMPONENTS --- */
 
 // Reusable Button
@@ -824,9 +818,6 @@ const App = () => {
                      We believe every event tells a story. From intimate board meetings to sprawling international summits, our mission is to ensure your brand's narrative is heard, felt, and remembered.
                    </p>
                  </div>
-                 <div className="h-80 bg-gray-200 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover" alt="Team meeting" />
-                 </div>
                </div>
                
                {/* Added Core Values Section Here */}
@@ -892,4 +883,5 @@ const App = () => {
 };
 
 export default App;
+
 

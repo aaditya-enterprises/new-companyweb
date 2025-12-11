@@ -135,27 +135,27 @@ const CORE_VALUES_DATA = [
 const PORTFOLIO_ITEMS = [
   {
     id: 1,
-    title: "Niti Ayog Event",
-    category: "Conference",
-    image: "surajkund.png", 
-    stats: { guests: "350+", location: "Vardaan Jimkana, Surajkund"},
-    summary: "A 3-day global technology summit featuring 50+ speakers and immersive expo halls."
-  },
-  {
-    id: 2,
     title: "ITDC Event",
     category: "Conference",
     image: "vigyanbhavan.jpeg",
-    stats: { guests: "900+", location: "Vigyan Bhavan, Delhi"},
-    summary: "An elegant black-tie awards evening for the banking sector's top achievers."
+    stats: { guests: "900+", location: "Vigyan Bhavan, Delhi", date: "Nov 2025"},
+    summary: "Hosted at the prestigious Vigyaan Bhavan, this major ITDC government conference welcomed over 900 attendees. We oversaw end-to-end management, from venue branding to complex crowd control protocols. The event highlighted our expertise in delivering large-scale, high-impact summits at India’s most iconic government venues with absolute professionalism."
+  },
+  {
+    id: 2,
+    title: "Niti Ayog Event",
+    category: "Conference",
+    image: "surajkund.png", 
+    stats: { guests: "350+", location: "Vardaan Jimkana, Surajkund", date: "Oct 2025"},
+    summary: "Executed in October 2025, this exclusive Niti Aayog conference required high-level protocol management for 350+ distinguished guests. We focused on creating a secure and sophisticated environment at Vardaan Jimkhana, ensuring flawless VIP hospitality and operational efficiency that catered specifically to the needs of high-ranking government officials."
   },
   {
     id: 3,
     title: "ICMR Event",
     category: "Conference",
     image: "bharatmandapam.png",
-    stats: { guests: "3000+", location: "Bharat Mandapam, Delhi"},
-    summary: "High-energy reveal of the new EV line with projection mapping and live demos."
+    stats: { guests: "3000+", location: "Bharat Mandapam, Delhi", date: "Sep 2025"},
+    summary: "We orchestrated this massive government medical summit at the world-class Bharat Mandapam. Handling over 3,000 delegates, our team managed complex logistics, including multi-track sessions and large-scale attendee flow. This project demonstrated our capacity to execute mega-events with precision, ensuring a seamless experience for medical professionals and dignitaries alike."
   }
 ];
 
@@ -882,6 +882,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 

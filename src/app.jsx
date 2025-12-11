@@ -171,8 +171,8 @@ const TEAM = [
 const Button = ({ children, variant = 'primary', className = '', onClick, type="button", disabled=false }) => {
   const baseStyles = "inline-flex items-center justify-center px-8 py-3 transition-all duration-300 font-medium text-sm tracking-wide uppercase";
   const variants = {
-    primary: `bg-[${THEME.colors.gold}] text-white hover:bg-[${THEME.colors.goldHover}] hover:shadow-lg disabled:opacity-70`,
-    outline: `border border-[${THEME.colors.gold}] text-[${THEME.colors.gold}] hover:bg-[${THEME.colors.gold}] hover:text-white`,
+    primary: `bg-[#C49A59] text-white hover:bg-[#A88248] hover:shadow-lg disabled:opacity-70`,
+    outline: `border border-[#C49A59] text-[#C49A59] hover:bg-[#C49A59] hover:text-white`,
     white: `bg-white text-black hover:bg-gray-100`
   };
   
@@ -223,12 +223,12 @@ const Navbar = ({ activePage, setActivePage }) => {
                className="object-contain h-full w-full"
                onError={(e) => {
                  e.target.style.display = 'none';
-                 e.target.parentElement.innerHTML = `<div class="bg-[${THEME.colors.gold}] w-full h-full rounded-full flex items-center justify-center text-white font-bold text-xl">A</div>`;
+                 e.target.parentElement.innerHTML = `<div class="bg-[#C49A59] w-full h-full rounded-full flex items-center justify-center text-white font-bold text-xl">A</div>`;
                }}
              />
           </div>
           <span className={`font-serif text-xl font-bold tracking-wide ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-            AADITYA <span className={`text-[${THEME.colors.gold}]`}>ENTERPRISES</span>
+            AADITYA <span className={`text-[#C49A59]`}>ENTERPRISES</span>
           </span>
         </div>
 
@@ -238,8 +238,8 @@ const Navbar = ({ activePage, setActivePage }) => {
             <button
               key={link.id}
               onClick={() => setActivePage(link.id)}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-[${THEME.colors.gold}] ${
-                activePage === link.id ? `text-[${THEME.colors.gold}]` : (isScrolled ? 'text-gray-800' : 'text-white')
+              className={`text-sm font-medium tracking-wide transition-colors hover:text-[#C49A59] ${
+                activePage === link.id ? `text-[#C49A59]` : (isScrolled ? 'text-gray-800' : 'text-white')
               }`}
             >
               {link.name}
@@ -256,7 +256,7 @@ const Navbar = ({ activePage, setActivePage }) => {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-[${THEME.colors.gold}]"
+          className="md:hidden text-[#C49A59]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className={`w-8 h-8 ${isScrolled ? 'text-black' : 'text-white'}`} /> : <Menu className={`w-8 h-8 ${isScrolled ? 'text-black' : 'text-white'}`} />}
@@ -295,7 +295,7 @@ const Hero = ({ onCtaClick }) => (
     </div>
 
     <div className="relative z-10 text-center max-w-4xl px-6 animate-fade-in-up">
-      <p className={`text-[${THEME.colors.gold}] font-medium tracking-[0.2em] mb-4 uppercase`}>
+      <p className={`text-[#C49A59] font-medium tracking-[0.2em] mb-4 uppercase`}>
         Defining Excellence
       </p>
       <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 leading-tight">
@@ -321,7 +321,7 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl text-gray-900 mb-4">Our Expertise</h2>
-          <div className={`h-1 w-20 bg-[${THEME.colors.gold}] mx-auto mb-6`}></div>
+          <div className={`h-1 w-20 bg-[#C49A59] mx-auto mb-6`}></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We combine logistical precision with creative flair to deliver flawless events.
           </p>
@@ -330,14 +330,14 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service) => (
             <div key={service.id} className="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 group border-b-2 border-transparent hover:border-[#C49A59] flex flex-col items-start">
-              <div className={`text-[${THEME.colors.gold}] mb-6 transform group-hover:-translate-y-1 transition-transform`}>
+              <div className={`text-[#C49A59] mb-6 transform group-hover:-translate-y-1 transition-transform`}>
                 {service.icon}
               </div>
               <h3 className="font-serif text-2xl text-gray-900 mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">{service.desc}</p>
               <button 
                 onClick={() => setSelectedService(service)}
-                className={`mt-auto flex items-center text-sm font-bold uppercase tracking-wider text-gray-900 group-hover:text-[${THEME.colors.gold}] transition-colors`}
+                className={`mt-auto flex items-center text-sm font-bold uppercase tracking-wider text-gray-900 group-hover:text-[#C49A59] transition-colors`}
               >
                 Learn More <ChevronRight className="w-4 h-4 ml-1" />
               </button>
@@ -357,7 +357,7 @@ const ServicesSection = () => {
               <X className="w-5 h-5" />
             </button>
             
-            <div className={`bg-[${THEME.colors.gold}] p-8 text-white`}>
+            <div className={`bg-[#C49A59] p-8 text-white`}>
               <div className="mb-4 opacity-90">{selectedService.icon}</div>
               <h3 className="font-serif text-3xl font-bold">{selectedService.title}</h3>
             </div>
@@ -371,9 +371,9 @@ const ServicesSection = () => {
               <div className="bg-gray-50 p-6 rounded border border-gray-100">
                 <h4 className="font-bold text-gray-900 text-sm mb-2">Why choose us for this?</h4>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[${THEME.colors.gold}]`} /> Specialized team with 10+ years experience</li>
-                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[${THEME.colors.gold}]`} /> Trusted vendor network</li>
-                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[${THEME.colors.gold}]`} /> 100% Satisfaction Guarantee</li>
+                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[#C49A59]`} /> Specialized team with 10+ years experience</li>
+                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[#C49A59]`} /> Trusted vendor network</li>
+                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[#C49A59]`} /> 100% Satisfaction Guarantee</li>
                 </ul>
               </div>
 
@@ -394,13 +394,13 @@ const WhyChooseSection = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-16">
         <h2 className="font-serif text-4xl text-gray-900 mb-4">Why Choose Aaditya Enterprises?</h2>
-        <div className={`h-1 w-20 bg-[${THEME.colors.gold}] mx-auto mb-6`}></div>
+        <div className={`h-1 w-20 bg-[#C49A59] mx-auto mb-6`}></div>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {WHY_CHOOSE_DATA.map((item, index) => (
           <div key={index} className="bg-white p-8 rounded-lg shadow-lg border border-gray-100 flex flex-col items-center text-center transition-transform hover:-translate-y-2">
-            <div className={`text-[${THEME.colors.gold}] mb-6 p-4 bg-orange-50 rounded-full`}>
+            <div className={`text-[#C49A59] mb-6 p-4 bg-orange-50 rounded-full`}>
               {item.icon}
             </div>
             <h3 className="font-serif text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
@@ -418,13 +418,13 @@ const CoreValuesSection = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-16">
         <h2 className="font-serif text-4xl text-gray-900 mb-4">Core Values</h2>
-        <div className={`h-1 w-20 bg-[${THEME.colors.gold}] mx-auto mb-6`}></div>
+        <div className={`h-1 w-20 bg-[#C49A59] mx-auto mb-6`}></div>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
         {CORE_VALUES_DATA.map((item, index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group">
-            <div className={`text-[${THEME.colors.gold}] mb-4 transform group-hover:scale-110 transition-transform`}>
+            <div className={`text-[#C49A59] mb-4 transform group-hover:scale-110 transition-transform`}>
               {item.icon}
             </div>
             <h3 className="font-serif text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -445,7 +445,7 @@ const PortfolioSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
           <h2 className="font-serif text-4xl text-gray-900 mb-4">Selected Works</h2>
-          <div className={`h-1 w-20 bg-[${THEME.colors.gold}]`}></div>
+          <div className={`h-1 w-20 bg-[#C49A59]`}></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -462,7 +462,7 @@ const PortfolioSection = () => {
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <span className={`text-[${THEME.colors.gold}] text-xs font-bold uppercase tracking-wider mb-2`}>
+                <span className={`text-[#C49A59] text-xs font-bold uppercase tracking-wider mb-2`}>
                   {item.category}
                 </span>
                 <h3 className="text-white font-serif text-2xl mb-1">{item.title}</h3>
@@ -505,7 +505,7 @@ const PortfolioSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
                 <div>
                   <h2 className="text-white font-serif text-3xl md:text-4xl">{selectedProject.title}</h2>
-                  <p className={`text-[${THEME.colors.gold}] text-lg`}>{selectedProject.category}</p>
+                  <p className={`text-[#C49A59] text-lg`}>{selectedProject.category}</p>
                 </div>
               </div>
             </div>
@@ -524,21 +524,21 @@ const PortfolioSection = () => {
                 <h3 className="font-serif text-lg mb-4">Key Stats</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <Users className={`w-5 h-5 text-[${THEME.colors.gold}]`} />
+                    <Users className={`w-5 h-5 text-[#C49A59]`} />
                     <div>
                       <p className="text-xs text-gray-500 uppercase">Guests</p>
                       <p className="font-medium">{selectedProject.stats.guests}</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <MapPin className={`w-5 h-5 text-[${THEME.colors.gold}]`} />
+                    <MapPin className={`w-5 h-5 text-[#C49A59]`} />
                     <div>
                       <p className="text-xs text-gray-500 uppercase">Location</p>
                       <p className="font-medium">{selectedProject.stats.location}</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Calendar className={`w-5 h-5 text-[${THEME.colors.gold}]`} />
+                    <Calendar className={`w-5 h-5 text-[#C49A59]`} />
                     <div>
                       <p className="text-xs text-gray-500 uppercase">Date</p>
                       <p className="font-medium">{selectedProject.stats.date}</p>
@@ -577,18 +577,18 @@ const ContactSection = () => {
   return (
     <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
        {/* Background accent */}
-       <div className={`absolute top-0 right-0 w-96 h-96 bg-[${THEME.colors.gold}] opacity-10 rounded-full blur-[100px] pointer-events-none`}></div>
+       <div className={`absolute top-0 right-0 w-96 h-96 bg-[#C49A59] opacity-10 rounded-full blur-[100px] pointer-events-none`}></div>
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 relative z-10">
         <div>
-          <h2 className="font-serif text-4xl md:text-5xl mb-6">Let's Create Something <span className={`text-[${THEME.colors.gold}]`}>Extraordinary</span></h2>
+          <h2 className="font-serif text-4xl md:text-5xl mb-6">Let's Create Something <span className={`text-[#C49A59]`}>Extraordinary</span></h2>
           <p className="text-gray-400 text-lg mb-10 max-w-md">
             Ready to plan your next corporate milestone? Fill out the form, and our event specialists will contact you within 24 hours.
           </p>
 
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <div className={`p-3 bg-[${THEME.colors.gold}]/10 rounded-full text-[${THEME.colors.gold}]`}>
+              <div className={`p-3 bg-[#C49A59]/10 rounded-full text-[#C49A59]`}>
                 <Phone className="w-6 h-6" />
               </div>
               <div>
@@ -598,7 +598,7 @@ const ContactSection = () => {
             </div>
             
             <div className="flex items-center gap-4">
-              <div className={`p-3 bg-[${THEME.colors.gold}]/10 rounded-full text-[${THEME.colors.gold}]`}>
+              <div className={`p-3 bg-[#C49A59]/10 rounded-full text-[#C49A59]`}>
                 <Mail className="w-6 h-6" />
               </div>
               <div>
@@ -618,7 +618,7 @@ const ContactSection = () => {
         <div className="bg-white rounded-lg p-8 text-gray-900 shadow-2xl">
           {status === 'success' ? (
             <div className="h-full flex flex-col items-center justify-center text-center py-12">
-              <CheckCircle className={`w-16 h-16 text-[${THEME.colors.gold}] mb-4`} />
+              <CheckCircle className={`w-16 h-16 text-[#C49A59] mb-4`} />
               <h3 className="font-serif text-2xl font-bold mb-2">Enquiry Received</h3>
               <p className="text-gray-600 mb-6">Thank you, {formData.name}. We have received your details and will be in touch shortly.</p>
               <Button onClick={() => setStatus('idle')} variant="outline">Send Another</Button>
@@ -703,7 +703,7 @@ const Footer = ({ setActivePage }) => (
       <div className="grid md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-1 md:col-span-1">
           <div className="font-serif text-2xl font-bold tracking-wide mb-6">
-            AADITYA <span className={`text-[${THEME.colors.gold}]`}>ENTERPRISES</span>
+            AADITYA <span className={`text-[#C49A59]`}>ENTERPRISES</span>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed mb-6">
             Premier corporate event management delivering luxury experiences, seamless logistics, and impactful brand activations globally.
@@ -770,7 +770,7 @@ const App = () => {
             <ServicesSection />
             
             {/* Stats Strip */}
-            <div className={`bg-[${THEME.colors.gold}] py-12`}>
+            <div className={`bg-[#C49A59] py-12`}>
               <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
                 <div>
                   <div className="text-4xl font-serif font-bold mb-1">500+</div>
@@ -801,7 +801,7 @@ const App = () => {
               <div className="max-w-4xl mx-auto px-6 text-center">
                  <h2 className="font-serif text-3xl mb-12">Client Words</h2>
                  <div className="relative bg-white p-10 shadow-lg rounded-lg">
-                   <div className={`text-[${THEME.colors.gold}] text-6xl font-serif absolute top-4 left-6 opacity-20`}>"</div>
+                   <div className={`text-[#C49A59] text-6xl font-serif absolute top-4 left-6 opacity-20`}>"</div>
                    <p className="text-gray-600 text-lg italic mb-6 relative z-10">
                      Aaditya Enterprises didn't just organize an event; they curated an experience that perfectly aligned with our luxury brand image. The attention to detail was impeccable.
                    </p>
@@ -846,7 +846,7 @@ const App = () => {
                        <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                      </div>
                      <h3 className="font-serif text-xl">{member.name}</h3>
-                     <p className={`text-[${THEME.colors.gold}] text-sm uppercase`}>{member.role}</p>
+                     <p className={`text-[#C49A59] text-sm uppercase`}>{member.role}</p>
                    </div>
                  ))}
                </div>

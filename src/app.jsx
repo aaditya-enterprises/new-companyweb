@@ -760,19 +760,19 @@ const App = () => {
             <div className={`bg-[#C49A59] py-12`}>
               <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
                 <div>
-                  <div className="text-4xl font-serif font-bold mb-1">500+</div>
+                  <div className="text-4xl font-serif font-bold mb-1">50+</div>
                   <div className="text-sm uppercase tracking-wider opacity-90">Events Delivered</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-serif font-bold mb-1">50+</div>
+                  <div className="text-4xl font-serif font-bold mb-1">4+</div>
                   <div className="text-sm uppercase tracking-wider opacity-90">Cities</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-serif font-bold mb-1">12</div>
+                  <div className="text-4xl font-serif font-bold mb-1">10+</div>
                   <div className="text-sm uppercase tracking-wider opacity-90">Years Exp.</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-serif font-bold mb-1">2M+</div>
+                  <div className="text-4xl font-serif font-bold mb-1">75k+</div>
                   <div className="text-sm uppercase tracking-wider opacity-90">Guests Hosted</div>
                 </div>
               </div>
@@ -882,6 +882,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 

@@ -474,15 +474,6 @@ const PortfolioSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Placeholder Instruction for Devs/Client */}
-        <div className="mt-12 p-4 bg-gray-50 border border-dashed border-gray-300 rounded text-center text-xs text-gray-500">
-          <p>
-            <strong>Developer Note:</strong> Replace images above with project assets. 
-            Recommended size: 800x600px (Gallery), 1920x1080px (Hero).
-            File path structure: <code>/assets/portfolio/[project-slug]/hero.jpg</code>
-          </p>
-        </div>
       </div>
 
       {/* Modal/Lightbox */}
@@ -594,6 +585,7 @@ const ContactSection = () => {
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Call Us</p>
                 <p className="text-xl font-medium">+91 9873457729</p>
+                <p className="text-xl font-medium">+91 9718474071</p>
               </div>
             </div>
             
@@ -663,9 +655,10 @@ const ContactSection = () => {
                   <label className="block text-xs font-bold uppercase text-gray-500 mb-1">Est. Budget</label>
                   <select name="budget" onChange={handleChange} className="w-full bg-gray-50 border border-gray-200 p-3 rounded focus:outline-none focus:border-[#C49A59]">
                     <option>Undecided</option>
-                    <option>10k - 50k</option>
-                    <option>50k - 100k</option>
-                    <option>100k+</option>
+                    <option>₹1,00,000 - ₹5,00,000</option>
+                    <option>₹5,00,000 - ₹10,00,000</option>
+                    <option>₹10,00,000 - ₹20,00,000</option>
+                    <option>₹20,00,000+</option>
                   </select>
                 </div>
               </div>
@@ -737,10 +730,11 @@ const Footer = ({ setActivePage }) => (
         <div>
           <h4 className="font-serif text-lg mb-6">Visit Us</h4>
           <address className="text-sm text-gray-400 not-italic leading-relaxed">
-            123 Business Bay, Tower A,<br/>
-            Financial District,<br/>
-            Mumbai, India 400051<br/><br/>
+            Building no. 112,<br/>
+            Kishangarh, Near Fortis Hospital,<br/>
+            Vasant Kunj, Delhi, India 110070<br/><br/>
             <span className="text-white">+91 9873457729</span>
+            <span className="text-white">+91 9718474071</span>
           </address>
         </div>
       </div>
@@ -898,3 +892,4 @@ const App = () => {
 };
 
 export default App;
+

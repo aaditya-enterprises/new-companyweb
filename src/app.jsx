@@ -137,7 +137,7 @@ const PORTFOLIO_ITEMS = [
     id: 1,
     title: "Niti Ayog Event",
     category: "Conference",
-    image: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=1000&auto=format&fit=crop", 
+    image: "../public/surajkund.png", 
     stats: { guests: "350+", location: "Vardaan Jimkana, Surajkund"},
     summary: "A 3-day global technology summit featuring 50+ speakers and immersive expo halls."
   },
@@ -739,10 +739,11 @@ const Footer = ({ setActivePage }) => (
         <div>
           <h4 className="font-serif text-lg mb-6">Visit Us</h4>
           <address className="text-sm text-gray-400 not-italic leading-relaxed">
-            123 Business Bay, Tower A,<br/>
-            Financial District,<br/>
-            Mumbai, India 400051<br/><br/>
+            Building no. 112,<br/>
+            Kishangarh Near Fortis Hospital,<br/>
+            Vasant Kunj, Delhi, India 110070<br/><br/>
             <span className="text-white">+91 9873457729</span>
+            <span className="text-white">+91 9718474071</span>
           </address>
         </div>
       </div>

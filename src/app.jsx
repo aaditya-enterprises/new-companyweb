@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Menu, X, ChevronRight, Star, Calendar, Users, Award, 
   MapPin, Briefcase, Mail, Phone, Instagram, Linkedin, 
   Facebook, ArrowRight, Upload, CheckCircle, XCircle,
-  Shield, Clock, FileText, Zap, Heart, CheckSquare
+  Shield, Clock, Zap, CheckSquare
 } from 'lucide-react';
 
 /* --- THEME & ASSETS --- */
@@ -31,36 +31,42 @@ const SERVICES = [
     id: 1,
     title: "Corporate Event Planning",
     desc: "End-to-end execution of AGMs, product launches, and gala dinners tailored to your brand ethos.",
+    details: "Our corporate event planning service is comprehensive and bespoke. We handle every aspect of your event, from initial concept and theme development to venue selection, catering management, and on-site coordination. Whether it's a high-stakes AGM or a celebratory gala, we ensure your brand values are reflected in every detail.",
     icon: <Briefcase className="w-8 h-8" />
   },
   {
     id: 2,
     title: "Conferences & Summits",
     desc: "Large-scale logistical management for industry summits, ensuring seamless flow and engagement.",
+    details: "We specialize in the complex logistics required for large-scale conferences and global summits. Our team manages delegate registration, speaker coordination, AV production, and breakout session flows. We ensure that thousands of attendees have a seamless experience, allowing you to focus on the content and networking.",
     icon: <Users className="w-8 h-8" />
   },
   {
     id: 3,
     title: "Brand Activations",
     desc: "Immersive experiences that bring your brand story to life and connect directly with your audience.",
+    details: "In an increasingly digital world, tangible brand experiences matter more than ever. We design immersive pop-ups, interactive installations, and experiential marketing campaigns that captivate audiences. Our goal is to create shareable moments that amplify your brand's reach across social media and beyond.",
     icon: <Star className="w-8 h-8" />
   },
   {
     id: 4,
     title: "Luxury Experiences",
     desc: "Bespoke high-end retreats and VIP networking events crafted with meticulous attention to detail.",
+    details: "For your most discerning guests, only the exceptional will do. We curate exclusive luxury retreats, VIP dinners, and high-touch networking events. From private jet charters to Michelin-starred catering and personalized gifting, we ensure every touchpoint exudes sophistication and exclusivity.",
     icon: <Award className="w-8 h-8" />
   },
   {
     id: 5,
     title: "Venue & Vendor Mgmt",
     desc: "Access to an exclusive network of premium venues and top-tier vendors across the globe.",
+    details: "Leverage our decade-long relationships with the world's most sought-after venues and vendors. We negotiate the best rates and secure dates at locations that are often inaccessible to others. Our vendor network includes top-tier decorators, technical directors, and entertainers who meet our rigorous standards of quality.",
     icon: <MapPin className="w-8 h-8" />
   },
   {
     id: 6,
     title: "Employee Engagement",
     desc: "Creative team-building retreats and workshops designed to boost morale and productivity.",
+    details: "Invest in your most valuable asset: your people. We move beyond standard ice-breakers to create meaningful offsites, wellness retreats, and skill-building workshops. Our programs are designed to align with your company culture, fostering genuine connection and renewed energy among your teams.",
     icon: <Users className="w-8 h-8" />
   }
 ];
@@ -129,37 +135,30 @@ const CORE_VALUES_DATA = [
 const PORTFOLIO_ITEMS = [
   {
     id: 1,
-    title: "TechHorizon Summit 2024",
+    title: "Niti Ayog Event",
     category: "Conference",
     image: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=1000&auto=format&fit=crop", 
-    stats: { guests: "2,500+", location: "Dubai, UAE", date: "Nov 2024" },
+    stats: { guests: "350+", location: "Vardaan Jimkana, Surajkund"},
     summary: "A 3-day global technology summit featuring 50+ speakers and immersive expo halls."
   },
   {
-    id: 3,
-    title: "Neon Electric Launch",
-    category: "Product Launch",
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1000&auto=format&fit=crop",
-    stats: { guests: "300 (VIP)", location: "Mumbai, India", date: "Sept 2024" },
-    summary: "High-energy reveal of the new EV line with projection mapping and live demos."
-  },
-  {
-    id: 5,
-    title: "Future Health Expo",
+    id: 2,
+    title: "ITDC Event",
     category: "Conference",
-    image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=1000&auto=format&fit=crop",
-    stats: { guests: "1,200", location: "Singapore", date: "July 2024" },
-    summary: "Medical innovation exhibition connecting startups with healthcare giants."
+    image: "https://images.unsplash.com/photo-1519671482538-581aca198e32?q=80&w=1000&auto=format&fit=crop",
+    stats: { guests: "900+", location: "Vigyan Bhavan, Delhi"},
+    summary: "An elegant black-tie awards evening for the banking sector's top achievers."
   },
   {
-    id: 6,
-    title: "Solstice Annual Party",
-    category: "Corporate",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1000&auto=format&fit=crop",
-    stats: { guests: "800", location: "Bangalore, India", date: "Dec 2023" },
-    summary: "Year-end celebration transforming a warehouse into a futuristic lounge."
+    id: 3,
+    title: "ICMR Event",
+    category: "Conference",
+    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1000&auto=format&fit=crop",
+    stats: { guests: "3000+", location: "Bharat Mandapam, Delhi"},
+    summary: "High-energy reveal of the new EV line with projection mapping and live demos."
   }
 ];
+
 
 /* --- COMPONENTS --- */
 
@@ -302,43 +301,89 @@ const Hero = ({ onCtaClick }) => (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button onClick={onCtaClick} variant="primary">Plan Your Event</Button>
-        <Button onClick={() => onCtaClick('portfolio')} variant="primary">View Portfolio</Button>
+        <Button onClick={() => onCtaClick('portfolio')} variant="outline">View Portfolio</Button>
       </div>
     </div>
   </header>
 );
 
 // Services Section
-const ServicesSection = () => (
-  <section className="py-24 bg-gray-50">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="text-center mb-16">
-        <h2 className="font-serif text-4xl text-gray-900 mb-4">Our Expertise</h2>
-        <div className={`h-1 w-20 bg-[${THEME.colors.gold}] mx-auto mb-6`}></div>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          We combine logistical precision with creative flair to deliver flawless events.
-        </p>
-      </div>
+const ServicesSection = () => {
+  const [selectedService, setSelectedService] = useState(null);
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {SERVICES.map((service) => (
-          <div key={service.id} className="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 group border-b-2 border-transparent hover:border-[#C49A59]">
-            <div className={`text-[${THEME.colors.gold}] mb-6 transform group-hover:-translate-y-1 transition-transform`}>
-              {service.icon}
+  return (
+    <section className="py-24 bg-gray-50 relative">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="font-serif text-4xl text-gray-900 mb-4">Our Expertise</h2>
+          <div className={`h-1 w-20 bg-[${THEME.colors.gold}] mx-auto mb-6`}></div>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We combine logistical precision with creative flair to deliver flawless events.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {SERVICES.map((service) => (
+            <div key={service.id} className="bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300 group border-b-2 border-transparent hover:border-[#C49A59] flex flex-col items-start">
+              <div className={`text-[${THEME.colors.gold}] mb-6 transform group-hover:-translate-y-1 transition-transform`}>
+                {service.icon}
+              </div>
+              <h3 className="font-serif text-2xl text-gray-900 mb-3">{service.title}</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">{service.desc}</p>
+              <button 
+                onClick={() => setSelectedService(service)}
+                className={`mt-auto flex items-center text-sm font-bold uppercase tracking-wider text-gray-900 group-hover:text-[${THEME.colors.gold}] transition-colors`}
+              >
+                Learn More <ChevronRight className="w-4 h-4 ml-1" />
+              </button>
             </div>
-            <h3 className="font-serif text-2xl text-gray-900 mb-3">{service.title}</h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">{service.desc}</p>
-            <button className={`flex items-center text-sm font-bold uppercase tracking-wider text-gray-900 group-hover:text-[${THEME.colors.gold}] transition-colors`}>
-              Learn More <ChevronRight className="w-4 h-4 ml-1" />
-            </button>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
 
-// New Component: Why Choose Us
+      {/* Service Detail Modal */}
+      {selectedService && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in-up">
+          <div className="bg-white w-full max-w-2xl rounded-lg shadow-2xl relative overflow-hidden">
+            <button 
+              onClick={() => setSelectedService(null)}
+              className="absolute top-4 right-4 p-2 bg-gray-100 rounded-full text-black hover:bg-gray-200 transition-colors z-10"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            
+            <div className={`bg-[${THEME.colors.gold}] p-8 text-white`}>
+              <div className="mb-4 opacity-90">{selectedService.icon}</div>
+              <h3 className="font-serif text-3xl font-bold">{selectedService.title}</h3>
+            </div>
+            
+            <div className="p-8">
+              <h4 className="font-bold text-gray-900 uppercase tracking-wide text-xs mb-4">Service Overview</h4>
+              <p className="text-gray-600 leading-relaxed text-lg mb-8">
+                {selectedService.details}
+              </p>
+              
+              <div className="bg-gray-50 p-6 rounded border border-gray-100">
+                <h4 className="font-bold text-gray-900 text-sm mb-2">Why choose us for this?</h4>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[${THEME.colors.gold}]`} /> Specialized team with 10+ years experience</li>
+                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[${THEME.colors.gold}]`} /> Trusted vendor network</li>
+                  <li className="flex items-center gap-2"><CheckCircle className={`w-4 h-4 text-[${THEME.colors.gold}]`} /> 100% Satisfaction Guarantee</li>
+                </ul>
+              </div>
+
+              <div className="mt-8 flex justify-end">
+                <Button onClick={() => setSelectedService(null)} variant="outline">Close</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+// Component: Why Choose Us (RESTORED)
 const WhyChooseSection = () => (
   <section className="py-24 bg-white">
     <div className="max-w-7xl mx-auto px-6">
@@ -362,7 +407,7 @@ const WhyChooseSection = () => (
   </section>
 );
 
-// New Component: Core Values
+// Component: Core Values (RESTORED)
 const CoreValuesSection = () => (
   <section className="py-20 bg-gray-50">
     <div className="max-w-7xl mx-auto px-6">
@@ -386,46 +431,20 @@ const CoreValuesSection = () => (
   </section>
 );
 
-
-// Portfolio Section
+// Portfolio Section (UPDATED - No Filter)
 const PortfolioSection = () => {
-  const [filter, setFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState(null);
-
-  const categories = ['All', 'Corporate', 'Conference', 'Product Launch', 'Luxury'];
-  
-  const filteredItems = filter === 'All' 
-    ? PORTFOLIO_ITEMS 
-    : PORTFOLIO_ITEMS.filter(item => item.category === filter);
 
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-          <div>
-            <h2 className="font-serif text-4xl text-gray-900 mb-4">Selected Works</h2>
-            <div className={`h-1 w-20 bg-[${THEME.colors.gold}]`}></div>
-          </div>
-          
-          <div className="flex flex-wrap gap-2 mt-6 md:mt-0">
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-4 py-2 text-sm transition-all rounded-full ${
-                  filter === cat 
-                    ? `bg-black text-white` 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+        <div className="mb-12">
+          <h2 className="font-serif text-4xl text-gray-900 mb-4">Selected Works</h2>
+          <div className={`h-1 w-20 bg-[${THEME.colors.gold}]`}></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
+          {PORTFOLIO_ITEMS.map((item) => (
             <div 
               key={item.id} 
               className="group relative h-80 overflow-hidden cursor-pointer bg-gray-200"
@@ -586,7 +605,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Email Us</p>
-                <p className="text-xl font-medium">info@aadityaenterprisesind.com</p>
+                <p className="text-xl font-medium">hello@aadityaenterprises.com</p>
               </div>
             </div>
 
@@ -646,9 +665,9 @@ const ContactSection = () => {
                   <label className="block text-xs font-bold uppercase text-gray-500 mb-1">Est. Budget</label>
                   <select name="budget" onChange={handleChange} className="w-full bg-gray-50 border border-gray-200 p-3 rounded focus:outline-none focus:border-[#C49A59]">
                     <option>Undecided</option>
-                    <option>$10k - $50k</option>
-                    <option>$50k - $100k</option>
-                    <option>$100k+</option>
+                    <option>10k - 50k</option>
+                    <option>50k - 100k</option>
+                    <option>100k+</option>
                   </select>
                 </div>
               </div>
@@ -723,7 +742,7 @@ const Footer = ({ setActivePage }) => (
             123 Business Bay, Tower A,<br/>
             Financial District,<br/>
             Mumbai, India 400051<br/><br/>
-            <span className="text-white">+91 98765 43210</span>
+            <span className="text-white">+91 9873457729</span>
           </address>
         </div>
       </div>
@@ -807,7 +826,7 @@ const App = () => {
                <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
                  <div>
                    <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                     Founded in 2012, Aaditya Enterprises began with a singular vision: to bring a level of professionalism and luxury to the corporate event sector that was previously reserved for high-end weddings.
+                     Founded in 2021, Aaditya Enterprises began with a singular vision: to bring a level of professionalism and luxury to the corporate event sector.
                    </p>
                    <p className="text-lg text-gray-600 leading-relaxed">
                      We believe every event tells a story. From intimate board meetings to sprawling international summits, our mission is to ensure your brand's narrative is heard, felt, and remembered.
@@ -879,6 +898,5 @@ const App = () => {
     </div>
   );
 };
-
 
 export default App;

@@ -292,10 +292,10 @@ const Hero = ({ onCtaClick }) => (
         Defining Excellence
       </p>
       <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 leading-tight">
-        Crafting Exceptional <br/> Corporate Experiences
+        Crafting Exceptional <br/> Experiences
       </h1>
       <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
-        Aaditya Enterprises specializes in bespoke brand activations, conferences, and high-end corporate gatherings that leave a lasting legacy.
+        Aaditya Enterprises specializes in bespoke brand activations, conferences, and high-end corporate & government gatherings that leave a lasting legacy.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button onClick={onCtaClick} variant="primary">Plan Your Event</Button>
@@ -882,6 +882,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 

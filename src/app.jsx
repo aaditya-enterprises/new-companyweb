@@ -29,9 +29,9 @@ const LOGO_URL = "logo (1).png";
 const SERVICES = [
   {
     id: 1,
-    title: "Corporate Event Planning",
+    title: "Government & Corporate Event Planning",
     desc: "End-to-end execution of AGMs, product launches, and gala dinners tailored to your brand ethos.",
-    details: "Our corporate event planning service is comprehensive and bespoke. We handle every aspect of your event, from initial concept and theme development to venue selection, catering management, and on-site coordination. Whether it's a high-stakes AGM or a celebratory gala, we ensure your brand values are reflected in every detail.",
+    details: "Our event planning service is comprehensive and bespoke. We handle every aspect of your event, from initial concept and theme development to venue selection, catering management, and on-site coordination. Whether it's a government conferences & meeting or a high-stakes AGM, we ensure your brand values are reflected in every detail.",
     icon: <Briefcase className="w-8 h-8" />
   },
   {
@@ -316,7 +316,7 @@ const ServicesSection = () => {
           <h2 className="font-serif text-4xl text-gray-900 mb-4">Our Expertise</h2>
           <div className={`h-1 w-20 bg-[#C49A59] mx-auto mb-6`}></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We combine logistical precision with creative flair to deliver flawless events.
+            We combine logistical precision with creative flair to deliver flawless events and conferences.
           </p>
         </div>
 
@@ -882,6 +882,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 

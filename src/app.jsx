@@ -135,6 +135,22 @@ const CORE_VALUES_DATA = [
 const PORTFOLIO_ITEMS = [
   {
     id: 1,
+    title: "BRICS",
+    category: "Regional Summit",
+    image: "/gallery/BRICS/Brics1.jpeg",
+    stats: { guests: "2000+", location: "BRICS Summit", date: "2026"},
+    summary: "Our BRICS engagement involved coordinated planning for a high-profile diplomatic summit, balancing logistics, stakeholder management, and hospitality at scale. The project reflected our ability to deliver secure, seamless, and polished experiences for international leadership and large delegations."
+  },
+  {
+    id: 2,
+    title: "Southern African Customs Union (SACU)",
+    category: "Trade Bloc Event",
+    image: "/gallery/SACU/Sacu1.jpeg",
+    stats: { guests: "1500+", location: "SACU Forum", date: "2026"},
+    summary: "This SACU event demanded thoughtful operational coordination, regional stakeholder alignment, and premium hospitality for delegates across multiple countries. We created a sophisticated environment that supported both formal agenda flow and high-value networking."
+  },
+  {
+    id: 3,
     title: "ITDC Event",
     category: "Conference",
     image: "vigyanbhavan.jpeg",
@@ -142,7 +158,7 @@ const PORTFOLIO_ITEMS = [
     summary: "Hosted at the prestigious Vigyaan Bhavan, this major ITDC government conference welcomed over 900 attendees. We oversaw end-to-end management, from venue branding to complex crowd control protocols. The event highlighted our expertise in delivering large-scale, high-impact summits at India’s most iconic government venues with absolute professionalism."
   },
   {
-    id: 2,
+    id: 4,
     title: "Niti Ayog Event",
     category: "Conference",
     image: "surajkund.png", 
@@ -150,13 +166,32 @@ const PORTFOLIO_ITEMS = [
     summary: "Executed in October 2025, this exclusive Niti Aayog conference required high-level protocol management for 350+ distinguished guests. We focused on creating a secure and sophisticated environment at Vardaan Jimkhana, ensuring flawless VIP hospitality and operational efficiency that catered specifically to the needs of high-ranking government officials."
   },
   {
-    id: 3,
+    id: 5,
     title: "ICMR Event",
     category: "Conference",
     image: "bharatmandapam.png",
     stats: { guests: "3000+", location: "Bharat Mandapam, Delhi", date: "Sep 2025"},
     summary: "We orchestrated this massive government medical summit at the world-class Bharat Mandapam. Handling over 3,000 delegates, our team managed complex logistics, including multi-track sessions and large-scale attendee flow. This project demonstrated our capacity to execute mega-events with precision, ensuring a seamless experience for medical professionals and dignitaries alike."
   }
+];
+
+const GALLERY_IMAGES = [
+  { src: '/vigyanbhavan.jpeg', title: 'Vigyan Bhavan', category: 'Conference' },
+  { src: '/surajkund.png', title: 'Surajkund', category: 'Government Event' },
+  { src: '/bharatmandapam.png', title: 'Bharat Mandapam', category: 'Summit' },
+  { src: '/gallery/BRICS/Brics1.jpeg', title: 'BRICS 1', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics2.jpeg', title: 'BRICS 2', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics3.jpeg', title: 'BRICS 3', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics4.jpeg', title: 'BRICS 4', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics5.jpeg', title: 'BRICS 5', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics6.jpeg', title: 'BRICS 6', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics7.jpeg', title: 'BRICS 7', category: 'BRICS' },
+  { src: '/gallery/SACU/Sacu1.jpeg', title: 'SACU 1', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu2.jpeg', title: 'SACU 2', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu3.jpeg', title: 'SACU 3', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu4.jpeg', title: 'SACU 4', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu5.jpeg', title: 'SACU 5', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu6.jpeg', title: 'SACU 6', category: 'SACU' }
 ];
 
 /* --- COMPONENTS --- */
@@ -197,6 +232,7 @@ const Navbar = ({ activePage, setActivePage }) => {
     { name: 'Home', id: 'home' },
     { name: 'Services', id: 'services' },
     { name: 'Portfolio', id: 'portfolio' },
+    { name: 'Gallery', id: 'gallery' },
     { name: 'Contact', id: 'contact' },
   ];
 
@@ -437,7 +473,7 @@ const PortfolioSection = () => {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <h2 className="font-serif text-4xl text-gray-900 mb-4">Selected Works</h2>
+          <h2 className="font-serif text-4xl text-gray-900 mb-4">Events Organised</h2>
           <div className={`h-1 w-20 bg-[#C49A59]`}></div>
         </div>
 
@@ -537,6 +573,40 @@ const PortfolioSection = () => {
     </section>
   );
 };
+
+// Gallery Section
+const GallerySection = () => (
+  <section className="py-24 bg-gray-50">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="mb-12 text-center">
+        <h2 className="font-serif text-4xl text-gray-900 mb-4">Gallery</h2>
+        <div className="h-1 w-20 bg-[#C49A59] mx-auto mb-6"></div>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          A glimpse into the premium events, conferences, and high-impact gatherings we have proudly delivered across the region.
+        </p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {GALLERY_IMAGES.map((image, index) => (
+          <div key={`${image.title}-${index}`} className="group overflow-hidden rounded-xl shadow-lg bg-white">
+            <div className="relative h-72 overflow-hidden">
+              <img
+                src={image.src}
+                alt={image.title}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <span className="text-[#C49A59] text-xs font-bold uppercase tracking-wider">{image.category}</span>
+                <h3 className="text-white font-serif text-xl mt-1">{image.title}</h3>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 // Contact Form Section
 const ContactSection = () => {
@@ -699,7 +769,7 @@ const Footer = ({ setActivePage }) => (
         <div>
           <h4 className="font-serif text-lg mb-6">Quick Links</h4>
           <ul className="space-y-3 text-sm text-gray-400">
-            {['Home', 'Services', 'Portfolio', 'Contact'].map(link => (
+            {['Home', 'Services', 'Portfolio', 'Gallery', 'Contact'].map(link => (
               <li key={link}>
                 <button onClick={() => setActivePage(link.toLowerCase().split(' ')[0])} className="hover:text-white transition-colors">
                   {link}
@@ -754,6 +824,7 @@ const App = () => {
         return (
           <>
             <Hero onCtaClick={(page) => setActivePage(page || 'contact')} />
+            <PortfolioSection />
             <ServicesSection />
             
             {/* Stats Strip */}
@@ -780,8 +851,6 @@ const App = () => {
 
             {/* Added Why Choose Us Section Here */}
             <WhyChooseSection />
-
-            <PortfolioSection />
             
             {/* Testimonials */}
             <section className="py-24 bg-gray-50">
@@ -849,6 +918,13 @@ const App = () => {
         return (
           <div className="pt-24">
             <PortfolioSection />
+            <ContactSection />
+          </div>
+        );
+      case 'gallery':
+        return (
+          <div className="pt-24">
+            <GallerySection />
             <ContactSection />
           </div>
         );

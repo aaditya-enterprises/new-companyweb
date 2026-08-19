@@ -185,7 +185,6 @@ const GALLERY_IMAGES = [
   { src: '/gallery/BRICS/Brics4.jpeg', title: 'BRICS', category: 'BRICS' },
   { src: '/gallery/BRICS/Brics5.jpeg', title: 'BRICS', category: 'BRICS' },
   { src: '/gallery/BRICS/Brics6.jpeg', title: 'BRICS', category: 'BRICS' },
-  { src: '/gallery/BRICS/Brics7.jpeg', title: 'BRICS', category: 'BRICS' },
   { src: '/gallery/SACU/Sacu1.jpeg', title: 'SACU', category: 'SACU' },
   { src: '/gallery/SACU/Sacu2.jpeg', title: 'SACU', category: 'SACU' },
   { src: '/gallery/SACU/Sacu3.jpeg', title: 'SACU', category: 'SACU' },
@@ -663,15 +662,9 @@ const ContactSection = () => {
             </div>
 
             <div className="flex gap-4 mt-8 pt-8 border-t border-gray-800">
-              <a
-                href="https://linkedin.com/company/aaditya-enterprisesind/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Aaditya Enterprises on LinkedIn"
-                className="inline-flex"
-              >
-                <Linkedin className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
-              </a>
+              <Instagram className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
+              <Linkedin className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
+              <Facebook className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
             </div>
           </div>
         </div>

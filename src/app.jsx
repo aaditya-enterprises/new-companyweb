@@ -179,19 +179,19 @@ const GALLERY_IMAGES = [
   { src: '/vigyanbhavan.jpeg', title: 'Vigyan Bhavan', category: 'Conference' },
   { src: '/surajkund.png', title: 'Surajkund', category: 'Government Event' },
   { src: '/bharatmandapam.png', title: 'Bharat Mandapam', category: 'Summit' },
-  { src: '/gallery/BRICS/Brics1.jpeg', title: 'BRICS 1', category: 'BRICS' },
-  { src: '/gallery/BRICS/Brics2.jpeg', title: 'BRICS 2', category: 'BRICS' },
-  { src: '/gallery/BRICS/Brics3.jpeg', title: 'BRICS 3', category: 'BRICS' },
-  { src: '/gallery/BRICS/Brics4.jpeg', title: 'BRICS 4', category: 'BRICS' },
-  { src: '/gallery/BRICS/Brics5.jpeg', title: 'BRICS 5', category: 'BRICS' },
-  { src: '/gallery/BRICS/Brics6.jpeg', title: 'BRICS 6', category: 'BRICS' },
-  { src: '/gallery/BRICS/Brics7.jpeg', title: 'BRICS 7', category: 'BRICS' },
-  { src: '/gallery/SACU/Sacu1.jpeg', title: 'SACU 1', category: 'SACU' },
-  { src: '/gallery/SACU/Sacu2.jpeg', title: 'SACU 2', category: 'SACU' },
-  { src: '/gallery/SACU/Sacu3.jpeg', title: 'SACU 3', category: 'SACU' },
-  { src: '/gallery/SACU/Sacu4.jpeg', title: 'SACU 4', category: 'SACU' },
-  { src: '/gallery/SACU/Sacu5.jpeg', title: 'SACU 5', category: 'SACU' },
-  { src: '/gallery/SACU/Sacu6.jpeg', title: 'SACU 6', category: 'SACU' }
+  { src: '/gallery/BRICS/Brics1.jpeg', title: 'BRICS', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics2.jpeg', title: 'BRICS', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics3.jpeg', title: 'BRICS', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics4.jpeg', title: 'BRICS', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics5.jpeg', title: 'BRICS', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics6.jpeg', title: 'BRICS', category: 'BRICS' },
+  { src: '/gallery/BRICS/Brics7.jpeg', title: 'BRICS', category: 'BRICS' },
+  { src: '/gallery/SACU/Sacu1.jpeg', title: 'SACU', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu2.jpeg', title: 'SACU', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu3.jpeg', title: 'SACU', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu4.jpeg', title: 'SACU', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu5.jpeg', title: 'SACU', category: 'SACU' },
+  { src: '/gallery/SACU/Sacu6.jpeg', title: 'SACU', category: 'SACU' }
 ];
 
 /* --- COMPONENTS --- */

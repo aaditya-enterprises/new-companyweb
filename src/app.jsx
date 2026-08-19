@@ -648,7 +648,7 @@ const ContactSection = () => {
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Call Us</p>
                 <p className="text-xl font-medium">+91 9873457729</p>
-                <p className="text-xl font-medium">+91 9718474071</p>
+                <p className="text-xl font-medium">+91 9205800533</p>
               </div>
             </div>
             
@@ -658,14 +658,20 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Email Us</p>
-                <p className="text-xl font-medium">hello@aadityaenterprises.com</p>
+                <p className="text-xl font-medium">info@aadityaenterprisesind.com</p>
               </div>
             </div>
 
             <div className="flex gap-4 mt-8 pt-8 border-t border-gray-800">
-              <Instagram className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
-              <Linkedin className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
-              <Facebook className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
+              <a
+                href="https://linkedin.com/company/aaditya-enterprisesind/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Aaditya Enterprises on LinkedIn"
+                className="inline-flex"
+              >
+                <Linkedin className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
+              </a>
             </div>
           </div>
         </div>
@@ -709,7 +715,7 @@ const ContactSection = () => {
                   <label className="block text-xs font-bold uppercase text-gray-500 mb-1">Event Type</label>
                   <select name="type" onChange={handleChange} className="w-full bg-gray-50 border border-gray-200 p-3 rounded focus:outline-none focus:border-[#C49A59]">
                     <option>Corporate Event</option>
-                    <option>Conference</option>
+                    <option>Government Conference</option>
                     <option>Product Launch</option>
                     <option>Brand Activation</option>
                   </select>
@@ -783,7 +789,7 @@ const Footer = ({ setActivePage }) => (
           <h4 className="font-serif text-lg mb-6">Services</h4>
           <ul className="space-y-3 text-sm text-gray-400">
             <li>Corporate Planning</li>
-            <li>Conferences</li>
+            <li>Government Conferences</li>
             <li>Brand Activations</li>
             <li>Luxury Retreats</li>
             <li>Product Launches</li>
@@ -793,11 +799,11 @@ const Footer = ({ setActivePage }) => (
         <div>
           <h4 className="font-serif text-lg mb-6">Visit Us</h4>
           <address className="text-sm text-gray-400 not-italic leading-relaxed">
-            Building no. 112,<br/>
-            Kishangarh, Near Fortis Hospital,<br/>
-            Vasant Kunj, Delhi, India 110070<br/><br/>
+            7/1501 Orange County,<br/>
+            Ahinsa Khand 1, Indirapuram, <br/>
+            Ghaziabad, U.P. 201014 <br/><br/>
             <span className="text-white">+91 9873457729</span>
-            <span className="text-white">+91 9718474071</span>
+            <span className="text-white">+91 9205800533</span>
           </address>
         </div>
       </div>
